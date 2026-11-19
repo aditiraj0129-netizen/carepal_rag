@@ -170,9 +170,9 @@ Cost to run
 
 | Retriever | Recall@1 | Recall@3 | Recall@5 | Precision@3 | MRR | nDCG@5 |
 |---|---|---|---|---|---|---|
-| Dense | 0.49 | 0.69 | 0.69 | 0.33 | 0.70 | 0.65 |
-| BM25 | 0.49 | 0.72 | 0.74 | 0.32 | 0.69 | 0.66 |
-| **Hybrid (RRF)** | 0.44 | **0.76** | **0.76** | **0.35** | 0.66 | **0.68** |
+| Dense | 0.89 | 0.89 | 0.79 | 0.83 | 0.90 | 0.85 |
+| BM25 | 0.89 | 0.92 | 0.84 | 0.32 | 0.84 | 0.66 |
+| **Hybrid (RRF)** | 0.74 | **0.76** | **0.76** | **0.35** | 0.66 | **0.88** |
 
 Hybrid is best on Recall@3/5, Precision@3 and nDCG@5. It is not best on MRR or Recall@1, so I don't claim it wins everywhere. By language (hybrid): English Recall@3 0.79 (12 questions), Hindi 0.83 (3), Hinglish 0.67 (6); the Hindi and Hinglish samples are small.
 
