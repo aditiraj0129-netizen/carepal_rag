@@ -1,0 +1,14 @@
+.venv/
+node_modules/
+dist/
+.env
+*.sqlite3
+backend/data/
+backend/chunks.jsonl
+backend/eval_real.txt
+backend/eval_failures.txt
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.DS_Store
+shots/

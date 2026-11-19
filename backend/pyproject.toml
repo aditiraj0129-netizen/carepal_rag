@@ -1,0 +1,34 @@
+[project]
+name = "carepal-assist-backend"
+version = "0.1.0"
+description = "CarePal Assist: grounded, multilingual RAG support assistant (prototype)"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "httpx",
+  "pydantic>=2",
+  "pydantic-settings",
+  "chromadb",
+  "rank-bm25",
+  "snowballstemmer",
+  "beautifulsoup4",
+  "lxml",
+  "defusedxml",
+  "numpy",
+  "langsmith",
+]
+
+[project.optional-dependencies]
+# Real multilingual embeddings (needs access to huggingface.co to download weights)
+embeddings = ["sentence-transformers"]
+# Only needed if the site renders client-side and --render is used
+render = ["playwright"]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
